@@ -29,13 +29,17 @@
                 $save =  $user->add();
 
                 if ($save) {
-                    $_SESSION['register_complete'] = "Registro completado con exito!!!";
+                    $_SESSION['register'] = "Complete";
                 }else{
-                    $_SESSION['register_failed'] = "Hubo un error al registrar el nuevo usuario";
+                    $_SESSION['register'] = "Failed";
                 }
             }
 
             header('Location: http://localhost/Aikara/Usuario/registro');
+        }
+
+        public function login(){
+            
         }
     }
 
