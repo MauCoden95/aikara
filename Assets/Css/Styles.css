@@ -1,0 +1,439 @@
+@import url('http://fonts.cdnfonts.com/css/a-otf-shin-go-pro');
+
+
+/*ESTILOS GENERALES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'A-OTF Shin Go Pro', sans-serif;    
+    transition: all 300ms;                 
+    scroll-behavior: smooth;                           
+}
+
+:root{
+    --color-principal: #f1ebe6;
+    --color-secundario: #c4181a;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.active{
+    display: block;
+}
+
+.no-active{
+    display: none;
+}
+
+.center{
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.success{
+    width: 100%;
+    height: 5rem;
+    background: rgb(15, 167, 2);
+    color: rgb(23, 87, 0);
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.5rem;
+}
+
+.error{
+    width: 100%;
+    height: 5rem;
+    background: rgb(246, 18, 18);
+    color: rgb(87, 0, 0);
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HEADER*/
+#header{
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background: var(--color-principal);
+}
+
+#header img{
+    width: 10rem;
+}
+
+#header #navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header #navbar ul li{
+    list-style: none;
+    margin: 0 2rem;
+}
+
+#header #navbar ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    color: var(--color-secundario);
+    border-radius: .5rem;
+}
+
+#header #navbar ul li a:hover{
+   background: var(--color-secundario);
+   color: #fff;
+}
+
+.login{
+    font-size: 2rem;
+    padding: 0.5rem 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.login i{
+    margin-left: 1rem;
+}
+
+.login-no-active{
+    color: var(--color-secundario);
+    border: .2rem solid var(--color-secundario);
+}
+
+.login-active{
+    color: #fff;
+    background: rgb(251, 56, 56);
+    border: .2rem solid var(--color-secundario);
+}
+
+.login-active i{
+    background: transparent;
+}
+
+.form-login{
+    position: absolute;
+    top: 8rem;
+    right: 8rem;
+    width: 20rem;
+    min-height: 10rem;
+    border: .1rem solid var(--color-secundario);
+    background: var(--color-principal);
+    border-radius: 1rem;
+}
+
+.form-login input{
+    display: block;
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"]{
+    padding-left: 1rem;
+    outline: none;
+}
+
+.form-login a{
+    display: block;
+    color: var(--color-secundario);
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.form-login a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SLIDER*/
+.slider{
+    width: 100%;
+    height: 55rem;
+}
+
+.slider-item{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-item__img{
+    width: 40%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-item__img img{
+    width: 45rem;
+    height: 45rem;
+    border-radius: 50%;
+}
+
+.slider-item__info{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slider-item__info h1{
+    font-size: 6rem;
+}
+
+.slider-item__info a:hover{
+    background: rgb(233, 86, 86);
+}
+
+.slider-item__info a{
+    font-size: 2rem;
+    padding: 1rem;
+    background: var(--color-secundario);
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.slider-item__info p{
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+/*REGISTRO*/
+#register{
+    width: 100%;
+    min-height: 55rem;
+}
+
+#register h1{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+#register form{
+    width: 30%;
+    min-height: 40rem;
+    border: .2rem solid var(--color-secundario);
+    margin: 4rem auto;
+}
+
+#register form input{
+    display: block;
+    outline: none;
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+
+
+
+
+
+
+
+/*ABOUT*/
+#about{
+    padding: 1px;
+    width: 100%;
+    min-height: 55rem;
+    background: var(--color-principal);
+}
+
+#about h2{
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.about-div{
+    width: 100%;
+    height: 40rem;
+}
+
+#about img{
+    width: 40%;
+    margin-right: 6rem;
+}
+
+#about .center p{
+    width: 40%;
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 3rem auto;
+    text-align: justify;
+}
+
+#about h4{
+    font-size: 2rem;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+
+
+.about-info{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-info__item{
+    width: 15%;
+    height: 50%;
+    border: .1rem solid #000;
+    text-align: center;
+}
+
+.about-info__item h3{
+    font-size: 6rem;
+    line-height: 8rem;
+    margin-top: 1rem;
+}
+
+.about-info__item p{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*INFO*/
+#info{
+   padding: 1px;
+   width: 100%;
+   min-height: 55rem;
+   background: var(--color-principal);
+}
+
+#info h2{
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+.contact-form{
+    width: 30%;
+    min-height: 40rem;
+    border: .2rem solid var(--color-secundario);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    outline: none;
+}
+
+.contact-info{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-info__item{
+    width: 15%;
+    height: 50%;
+    border: .1rem solid #000;
+}
+
+.contact-info__item h3{
+    display: block;
+    font-size: 6rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.contact-info__item p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+
+
+/*FOOTER*/
+#footer{
+    width: 100%;
+    height: 10rem;
+    background: var(--color-secundario);
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 10rem;
+}
