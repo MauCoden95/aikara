@@ -100,8 +100,34 @@
             return $result;
         }
 
+        
+
         public function login(){
-            $sql = "";
+            $result = false;
+            $username = $this->username;
+            $password = $this->password;
+
+
+            //Comprobar si existe el usuario
+            $sql = "SELECT * FROM users WHERE username = '$username'";
+            $login = $this->db->query($sql);
+
+           
+
+            if ($login && $login->num_rows == 1) {
+                $user = $login->fetch_object();
+
+                //Verificar la constraseña
+                $verify = password_verify($password,$usuario->password);
+               
+                if (verify) {
+                    $result = $user;                    
+                }
+
+
+            }
+            return $result;            
+
         }
     }
 

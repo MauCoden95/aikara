@@ -144,6 +144,7 @@ html{
     border: .1rem solid var(--color-secundario);
     background: var(--color-principal);
     border-radius: 1rem;
+    padding: 1rem 0;
 }
 
 .form-login input{

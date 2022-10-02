@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require_once './Views/Layout/Header.php';
     require_once './Autoload.php';
 
@@ -15,7 +16,7 @@
         }
     }
 
-    //session_destroy();
+      
 ?>
 
     <section id="about">

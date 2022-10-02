@@ -1,5 +1,6 @@
 <?php
     require_once 'Config/Parameters.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +28,23 @@
                 </ul>
             </nav>
 
-            <button class="login login-no-active">Login<i class="fas fa-user"></i></button>
+           
+            <?php if(isset($_SESSION['identity'])) : ?>
+                <button class="login login-no-active"><?= $_SESSION['identity']->username; ?><i class="fas fa-user"></i></button>
+                
+            <?php else: ?>
+                <button class="login login-no-active">Login<i class="fas fa-user"></i></button>
+            <?php endif; ?>
 
-            <form action="" method="post" class="form-login no-active">
+            
+            <form action="http://localhost/Aikara/Usuario/login" method="post" class="form-login no-active">
+                <?php if(isset($_SESSION['error_login'])) : ?>
+                    <div class="error">
+                        <p>Error en el login</p>
+                    </div>
+                <?php endif; ?>
+
+                
                 <input type="text" name="user" placeholder="Usuario" autocomplete="off">
                 <input type="password" name="password" placeholder="Contraseña">
                 <input type="submit" value="Ingresar">

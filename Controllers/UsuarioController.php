@@ -1,6 +1,6 @@
 <?php
     require_once 'Models/Usuario.php';
-    session_start();
+    
 
     class UsuarioController{
         public function registro(){
@@ -39,7 +39,27 @@
         }
 
         public function login(){
-            
+            if($_POST){
+                //Identificar al usuario
+                //Consulta a la bbdd 
+                $user = new Usuario();
+                $user->setUsername($_POST['user']);
+                $user->setPassword($_POST['password']);
+                $identity = $user->login();
+
+                if ($identity) {
+                    $_SESSION['identity'] = $identity;
+                    unset($_SESSION['error_login']);
+                   
+                }else{
+                    $_SESSION['error_login'] = true;
+                }
+
+                
+                //Crear una sesion
+            }
+
+            header('Location: http://localhost/Aikara/Comida/Index');
         }
     }
 
