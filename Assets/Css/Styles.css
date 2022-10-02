@@ -59,7 +59,9 @@ html{
     font-size: 1.5rem;
 }
 
-
+.input-hidden{
+    display: none !important;
+}
 
 
 
@@ -133,6 +135,13 @@ html{
 
 .login-active i{
     background: transparent;
+}
+
+.user-active{
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
 .form-login{

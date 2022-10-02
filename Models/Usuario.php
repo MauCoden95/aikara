@@ -129,6 +129,46 @@
             return $result;            
 
         }
+
+        public function update(){
+            $result = false;
+            //$id = $_SESSION['identity']->id;
+            // $username = $this->username;
+            // $name = $this->name;
+            // $dni = $this->dni;
+            // $address = $this->address;
+            // $city = $this->city;
+            // $phone = $this->phone;
+            // $password = $this->password;
+
+
+          
+
+
+            
+
+                $password_crypt = password_hash($this->getPassword(), PASSWORD_BCRYPT, ['cost' => 4]);
+                $sql = "UPDATE users SET username = '{$this->getUsername()}', name = '{$this->getName()}', dni = {$this->getDni()}, address = '{$this->getAddress()}', city = '{$this->getCity()}', phone = {$this->getPhone()}, password = '{$this->getPassword()}' WHERE id = {$this->getId()}";
+
+                $query = $this->db->query($sql);
+                if ($query) {
+                    
+                }
+
+
+                //Verificar la constraseña
+                // $verify = password_verify($password,$usuario->password);
+               
+                // if (verify) {
+                //     $result = $user;                    
+                // }
+
+
+            
+
+            return $result;
+
+        }
     }
 
 

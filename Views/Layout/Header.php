@@ -30,26 +30,33 @@
 
            
             <?php if(isset($_SESSION['identity'])) : ?>
-                <button class="login login-no-active"><?= $_SESSION['identity']->username; ?><i class="fas fa-user"></i></button>
-                
+                <button class="user-active login-no-active"><?= $_SESSION['identity']->username; ?></button>
             <?php else: ?>
                 <button class="login login-no-active">Login<i class="fas fa-user"></i></button>
             <?php endif; ?>
 
             
             <form action="http://localhost/Aikara/Usuario/login" method="post" class="form-login no-active">
-                <?php if(isset($_SESSION['error_login'])) : ?>
-                    <div class="error">
-                        <p>Error en el login</p>
-                    </div>
-                <?php endif; ?>
+                <?php if(!isset($_SESSION['identity'])) : ?>
+                    <?php if(isset($_SESSION['error_login'])) : ?>
+                        <div class="error">
+                            <p>Error en el login</p>
+                        </div>
+                    <?php endif; ?>
 
-                
-                <input type="text" name="user" placeholder="Usuario" autocomplete="off">
-                <input type="password" name="password" placeholder="Contraseña">
-                <input type="submit" value="Ingresar">
-                <a href="<?= base_url ?>/Usuario/registro">Registrarse</a>
-                <a href="#">Recuperar contraseña</a>
+                    
+                    <input type="text" name="user" placeholder="Usuario" autocomplete="off">
+                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="submit" value="Ingresar">
+                    <a href="<?= base_url ?>/Usuario/registro">Registrarse</a>
+                    <a href="#">Recuperar contraseña</a>
+                <?php else: ?>
+                    <a href="#">Mis Pedidos</a>
+                    <a href="http://localhost/Aikara/Usuario/update">Configuracion</a>
+                    <a href="http://localhost/Aikara/Usuario/logout">Cerrar Sesion</a>                   
+
+
+                <?php endif; ?>
             </form>
         </div>
        

@@ -61,6 +61,50 @@
 
             header('Location: http://localhost/Aikara/Comida/Index');
         }
+
+
+        public function logout(){
+            session_destroy();
+            header('Location: http://localhost/Aikara/Comida/Index');
+        }
+
+        public function update(){
+            require_once 'Views/Usuario/Configuracion.php';
+        }
+
+        public function settings(){
+            if ($_POST) {
+                $id = $_POST['id'];
+                $username = $_POST['username'];
+                $name = $_POST['name'];
+                $dni = $_POST['dni'];
+                $address = $_POST['address'];
+                $city = $_POST['city'];
+                $phone = $_POST['phone'];
+                $password = $_POST['password'];
+
+                $user = new Usuario();
+                $user->setId($id);
+                $user->setUsername($username);
+                $user->setName($name);
+                $user->setDni($dni);
+                $user->setAddress($address);
+                $user->setCity($city);
+                $user->setPhone($phone);
+                $user->setPassword($password);
+
+                $update = $user->update();
+
+                if ($update) {
+                    $_SESSION['update_user'] = "Complete";
+                }else{
+                    $_SESSION['update_user'] = "Failed";
+                }
+            }
+
+
+            header('Location: http://localhost/Aikara/Usuario/update');
+        }
     }
 
 
