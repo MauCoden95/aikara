@@ -275,8 +275,8 @@ html{
 
 #register form{
     width: 30%;
-    min-height: 40rem;
-    border: .2rem solid var(--color-secundario);
+    min-height: 15rem;
+    border: .2rem solid rgb(179, 179, 179);
     margin: 4rem auto;
 }
 
