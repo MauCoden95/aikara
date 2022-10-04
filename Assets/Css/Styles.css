@@ -201,6 +201,39 @@ html{
     min-height: 55rem;
 }
 
+.slider-home{
+    width: 50%;
+    height: 25rem;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slider-home h1{
+    font-size: 4rem;
+    color: #fff;
+}
+
+.slider-home p{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.slider-home a{
+    display: block;
+    font-size: 2rem;
+    background: var(--color-secundario);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.slider-home a:hover{
+    background: rgb(241, 111, 111);
+}
+
 .video-container{
     width: 100%;
 }
@@ -219,10 +252,8 @@ html{
     width: 20rem;
     height: 5rem;
     background: gray;
-    position: absolute;
-    top: 85%;
-    left: 40%;
     border-radius: 2rem;
+    margin: 13rem auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
