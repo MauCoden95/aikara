@@ -1,18 +1,15 @@
-<section class="slider">
-        
-            <div class="slider-item">
-                <div class="center">
-                    <div class="slider-item__img">
-                        <img src="<?= base_url ?>/Assets/Img/Comidas/Sushi.jpg" alt="Sushi">
-                    </div>
-                    
-                    <div class="slider-item__info">
-                        <h1>Sushi</h1>
-                        <p>Orden online</p>
-                        <a href="#">Ver menu</a>
-                    </div>
-                </div>
-            </div>
+<section class="slider" id="slider">
+    <div class="controls">
+        <span class="vid-btn active" data-src="<?= base_url ?>Assets/Videos/Barra-de-sushi.mp4"></span>
+        <span class="vid-btn" data-src="<?= base_url ?>Assets/Videos/Cortando-carne.mp4"></span>
+        <span class="vid-btn" data-src="<?= base_url ?>Assets/Videos/Salmon-humeante.mp4"></span>
+        <span class="vid-btn" data-src="<?= base_url ?>Assets/Videos/Comiendo-con-palitos.mp4"></span>
+        <span class="vid-btn" data-src="<?= base_url ?>Assets/Videos/Comida-en-plato.mp4"></span>
+    </div>
 
-       
+    <div class="video-container">
+        <video src="<?= base_url ?>Assets/Videos/Barra-de-sushi.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+    
 </section>
