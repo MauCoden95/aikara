@@ -21,6 +21,21 @@
 
     <section id="about">
         <h2>Quienes Somos</h2>
+        <div>
+            <img src="<?= base_url ?>/Assets/Img/Logo.png" alt="Logo">
+            <div class="info">
+                <p>Direccion: Suipacha 2300</p>
+                <p>Email: aikara@correo.com</p>
+                <p>Telefono: 4417-0041</p>
+                <h3>Horarios</h3>
+                <p>Lunes a sabados: 08:00 a 23:00</p>
+                <p>Domingos y feriados: 11:00 a 19:00</p>                
+            </div>
+        </div>
+    </section>
+
+<!-- <section id="about">
+        <h2>Quienes Somos</h2>
         <div class="about-div">
             <div class="center">
                 <p>
@@ -91,6 +106,6 @@
                 <p>Dom: 08:00 a 16:00</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
 <?php require_once './Views/Layout/Footer.php'; ?>
