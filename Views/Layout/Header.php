@@ -22,7 +22,7 @@
             <nav id="navbar">
                 <ul>
                     <li><a href="<?= base_url ?>/Comida/Index">Inicio</a></li>
-                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="<?= base_url ?>/Pagina/about">Sobre Nosotros</a></li>
                     <li><a href="">Menu</a></li>
                     <li><a href="">Ordenes</a></li>
                     <li><a href="#info">Contacto</a></li>

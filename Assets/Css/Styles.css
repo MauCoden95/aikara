@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/a-otf-shin-go-pro');
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4');
 
 
 /*ESTILOS GENERALES*/
@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'A-OTF Shin Go Pro', sans-serif;    
+    font-family: 'Segoe UI', sans-serif;    
     transition: all 300ms;                 
     scroll-behavior: smooth;                           
 }
@@ -19,6 +19,8 @@
 html{
     font-size: 62.5%;
 }
+
+
 
 .active{
     display: block;
@@ -100,7 +102,7 @@ html{
 #header #navbar ul li a{
     display: block;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 1rem;
     color: var(--color-secundario);
     border-radius: .5rem;
@@ -160,6 +162,7 @@ html{
     display: block;
     width: 90%;
     margin: 1rem auto;
+    padding: 1rem;
 }
 
 .form-login input[type="text"],
@@ -198,7 +201,7 @@ html{
 /*SLIDER*/
 .slider{
     width: 100%;
-    min-height: 55rem;
+    min-height: 45rem;
 }
 
 .slider-home{
@@ -283,6 +286,8 @@ html{
 #register{
     width: 100%;
     min-height: 55rem;
+    background: #fff;
+    padding: 1rem;
 }
 
 #register h1{
@@ -320,13 +325,15 @@ html{
     width: 100%;
     min-height: 55rem;
     background: var(--color-principal);
-    margin-top: -10rem;
 }
 
-#about h2{
+#about h3{
     font-size: 3rem;
-    text-align: center;
-    margin: 3rem 0;
+    margin: 2rem 0 0;
+}
+
+#about p{
+    font-size: 2rem;
 }
 
 #about > div{
@@ -357,6 +364,97 @@ html{
 
 
 
+/*SECTION ABOUT*/
+#section-about{
+    width: 100%;
+    min-height: 55rem;
+}
+
+#banner{
+    padding: 1px;
+    width: 100%;
+    height: 50rem;
+    background-image: url('../Img/Banner.jpg');
+}
+
+#banner > div{
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+    background: rgba(118, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#banner > div h2{
+    color: #fff;
+    font-size: 7rem;
+}
+
+
+
+
+
+
+
+
+
+.about-div__row{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.about-div__row p{
+    width: 40%;
+    height: 100%;
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.about-div__row img{
+    width: 40%;
+    height: 100%;
+}
+
+
+#section-about h4{
+    font-size: 4rem;
+    text-align: center;
+    margin: 10rem 0 0;
+}
+
+.about-info{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-info__item{
+    width: 20rem;
+    height: 20rem;
+    border: .1rem solid #000;
+}
+
+.about-info__item h3{
+    display: block;
+    font-size: 7rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.about-info__item > p{
+    font-size: 2rem;
+    text-align: center;
+}
 
 
 
@@ -432,7 +530,7 @@ html{
     height: 10rem;
     background: var(--color-secundario);
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     line-height: 10rem;
 }

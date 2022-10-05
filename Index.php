@@ -20,7 +20,6 @@
 ?>
 
     <section id="about">
-        <h2>Quienes Somos</h2>
         <div>
             <img src="<?= base_url ?>/Assets/Img/Logo.png" alt="Logo">
             <div class="info">
@@ -34,42 +33,7 @@
         </div>
     </section>
 
-<!-- <section id="about">
-        <h2>Quienes Somos</h2>
-        <div class="about-div">
-            <div class="center">
-                <p>
-                    Aetari es un restaurante dedicado a ofrecerte lo mejor de la gastronomía japonesa. Comenzamos en 2006 
-                    siendo un pequeño local familiar y con el pasar de los años, fuimos creciendo hasta convertirnos en un 
-                    reconocido restaurante. Orgullosos de nuestros logros, seguimos dando lo mejor de nosotros para elaborar 
-                    los platos mas ricos de Japón
-                </p>
 
-                <img src="<?= base_url ?>/Assets/Img/Quienes-somos.jpg" alt="Comida">
-            </div>
-            
-        </div>
-        
-
-        <h4>¿Porqué elegirnos?</h4>
-        <div class="about-info">
-            <div class="about-info__item">
-                <h3 class="fas fa-motorcycle"></h3>
-                <p>Envíos rápidos</p>
-            </div>
-
-            <div class="about-info__item">
-                <h3 class="fas fa-utensils"></h3>
-                <p>Excelente calidad</p>
-            </div>
-
-            <div class="about-info__item">
-                <h3 class="fas fa-paste"></h3>
-                <p>Orden online</p>
-            </div>
-        </div>
-
-    </section>
 
     
 
