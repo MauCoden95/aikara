@@ -25,7 +25,7 @@
                     <li><a href="<?= base_url ?>/Pagina/about">Sobre Nosotros</a></li>
                     <li><a href="">Menu</a></li>
                     <li><a href="">Ordenes</a></li>
-                    <li><a href="#info">Contacto</a></li>
+                    <li><a href="<?= base_url ?>/Pagina/contact">Contacto</a></li>
                 </ul>
             </nav>
 

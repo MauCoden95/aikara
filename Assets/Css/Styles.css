@@ -177,6 +177,7 @@ html{
     text-align: center;
     font-size: 1.5rem;
     text-decoration: none;
+    margin-bottom: 1rem;
 }
 
 .form-login a:hover{
@@ -466,13 +467,18 @@ html{
    padding: 1px;
    width: 100%;
    min-height: 55rem;
-   background: var(--color-principal);
 }
 
 #info h2{
     text-align: center;
     font-size: 3rem;
     margin: 2rem 0;
+}
+
+#info h3{
+    font-size: 4rem;
+    margin: 3rem 0;
+    text-align: center;
 }
 
 .contact-form{
@@ -516,7 +522,7 @@ html{
 }
 
 .contact-info__item p{
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-align: center;
 }
 
