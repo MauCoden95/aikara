@@ -48,7 +48,7 @@
         }
 
         public function getPassword() {
-            return $this->password;
+            return password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
         }
 
 
@@ -114,15 +114,16 @@
 
            
 
-            if ($login && $login->num_rows == 1) {
+            if (isset($login) && $login->num_rows == 1) {
                 $user = $login->fetch_object();
+                
 
                 //Verificar la constraseña
-                $verify = password_verify($password,$usuario->password);
+                $verify = password_verify($password,$user->password);
                
-                if (verify) {
+                if ($verify) {
                     $result = $user;                    
-                }
+                }              
 
 
             }
@@ -133,7 +134,6 @@
         public function update(){
                 $result = false;
 
-                $password_crypt = password_hash($this->getPassword(), PASSWORD_BCRYPT, ['cost' => 4]);
                 $sql = "UPDATE users SET username = '{$this->getUsername()}', name = '{$this->getName()}', dni = {$this->getDni()}, address = '{$this->getAddress()}', city = '{$this->getCity()}', phone = {$this->getPhone()}, password = '{$this->getPassword()}' WHERE id = {$this->getId()}";
 
                 $query = $this->db->query($sql);

@@ -33,3 +33,10 @@ CREATE TABLE reviews(
     review MEDIUMTEXT,
     constraint fk_reviews_users FOREIGN KEY(id) REFERENCES users(id)
 )Engine=InnoDB;
+
+
+CREATE TABLE categories(
+    id int(100) auto_increment not null PRIMARY KEY,
+    name VARCHAR(255) not null
+)Engine=InnoDB;
+

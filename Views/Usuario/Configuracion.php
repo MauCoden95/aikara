@@ -1,15 +1,24 @@
 <section id="register">
     <h1>Actualizar mis datos</h1>
     <form action="<?= base_url ?>/Usuario/settings" method="post">
-        <?php if(isset($_SESSION['update_user']) && $_SESSION['update_user'] == "Complete"): ?>
+        <?php if(isset($_SESSION['errors_update'])) : ?>
+            <!-- <div class="error">
+                <ul>
+                    <?php foreach($_SESSION['errors_update'] as $error_update) :  ?>
+                        <li><?= $error_update; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div> -->
+
+            <?php print_r(count($_SESSION['errors_update'])); ?>
+
+        <?php elseif(isset($_SESSION['register'])): ?>
             <div class="success">
-                <p>Datos actualizados con exito!!!</p>
-            </div>
-        <?php elseif(isset($_SESSION['update_user']) && $_SESSION['update_user'] == "Failed"): ?>
-            <div class="error">
-                <p>Hubo un error al actualizar los datos</p>
+                <p>Tus datos se actualizaron con exito!!!</p>
             </div>
         <?php endif; ?>
+
+        
         <input class="input-hidden" type="text" name="id" value="<?= $_SESSION['identity']->id ?>" autocomplete="off">
         <input type="text" name="name" value="<?= $_SESSION['identity']->name ?>" autocomplete="off">
         <input type="number" name="dni" value="<?= $_SESSION['identity']->dni ?>" autocomplete="off">
@@ -19,6 +28,17 @@
         <input type="text" name="username" value="<?= $_SESSION['identity']->username ?>" autocomplete="off">
         <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
         <input type="submit" value="Actualizar">
+
+
+        <!-- <input class="input-hidden" type="text" name="id" value="" autocomplete="off">
+        <input type="text" name="name" value="" autocomplete="off">
+        <input type="number" name="dni" value="" autocomplete="off">
+        <input type="text" name="address" value="" autocomplete="off">
+        <input type="text" name="city" value="" autocomplete="off">
+        <input type="number" name="phone" value="" autocomplete="off">
+        <input type="text" name="username" value="" autocomplete="off">
+        <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
+        <input type="submit" value="Actualizar"> -->
     </form>
 
 

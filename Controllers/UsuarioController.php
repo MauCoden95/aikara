@@ -26,15 +26,51 @@
                 $user->setPhone($phone);
                 $user->setPassword($password);
 
-                
 
-                $save =  $user->add();
+                $_SESSION['errors'] = array();
 
-                if ($save) {
-                    $_SESSION['register'] = "Complete";
-                }else{
-                    $_SESSION['register'] = "Failed";
+                if ($user->getName() == '' || preg_match("/[0-9]/", $user->getName())) {
+                    $_SESSION['errors']['name'] = "El nombre no puede estar vacio o contener numeros";
                 }
+            
+                if ($user->getDni() == '') {
+                    $_SESSION['errors']['dni'] = "El dni no puede estar vacio";
+                }
+
+                if ($user->getAddress() == '') {
+                    $_SESSION['errors']['address'] = "La direccion no puede estar vacia";
+                }
+
+                if ($user->getCity() == '' || preg_match("/[0-9]/", $user->getCity())) {
+                    $_SESSION['errors']['city'] = "La ciudad no puede estar vacia o contener numeros";
+                }
+
+                if ($user->getPhone() == '') {
+                    $_SESSION['errors']['phone'] = "El telefono no puede estar vacio";
+                }
+
+                if ($user->getUsername() == '') {
+                    $_SESSION['errors']['user'] = "El usuario no puede estar vacio";
+                }
+
+                if ($user->getPassword() == '' || strlen($user->getPassword()) <= 7) {
+                    $_SESSION['errors']['password'] = "La contraseña no puede estar vacia o tener menos de 8 caracteres";
+                }
+
+                if (count($_SESSION['errors']) <= 0) {
+                    $save =  $user->add();
+
+                    if ($save) {
+                        $_SESSION['register'] = "Complete";
+                        unset($_SESSION['errors']);
+                    }
+                }
+
+
+
+
+
+                
             }
 
             header('Location: http://localhost/Aikara/Usuario/registro');
@@ -49,6 +85,8 @@
                 $user->setPassword($_POST['password']);
                 $identity = $user->login();
 
+                
+
                 if ($identity) {
                     $_SESSION['identity'] = $identity;
                     unset($_SESSION['error_login']);
@@ -58,7 +96,7 @@
                 }
 
                 
-                //Crear una sesion
+                
             }
 
             header('Location: http://localhost/Aikara/Comida/Index');
@@ -75,8 +113,6 @@
         }
 
         public function settings(){
-            
-
             if (isset($_POST)) {
                 $id = $_POST['id'];
                 $username = $_POST['username'];
@@ -87,9 +123,7 @@
                 $phone = $_POST['phone'];
                 $password = $_POST['password'];
                 
-                if ($_POST['username'] == '' ||  $_POST['name'] == '' ||  $_POST['dni'] == '' ||  $_POST['address'] == '' ||  $_POST['city'] == '' ||  $_POST['phone'] == '' ||  $_POST['password'] == '') {
-                    $_SESSION['update_user'] = "Failed";
-                }else{
+                
                     $user = new Usuario();
                     $user->setId($id);
                     $user->setUsername($username);
@@ -100,19 +134,56 @@
                     $user->setPhone($phone);
                     $user->setPassword($password);
 
-                    $update = $user->update();
 
-                    if ($update) {
-                        $_SESSION['update_user'] = "Complete";
+                    // $_SESSION['errors_update'] = array();
+
+                    // if ($user->getName() == '' || preg_match("/[0-9]/", $user->getName())) {
+                    //     $_SESSION['errors_update']['name'] = "El nombre no puede estar vacio o contener numeros";
+                    // }
+                
+                    // if ($user->getDni() == '') {
+                    //     $_SESSION['errors_update']['dni'] = "El dni no puede estar vacio";
+                    // }
+
+                    // if ($user->getAddress() == '') {
+                    //     $_SESSION['errors_update']['address'] = "La direccion no puede estar vacia";
+                    // }
+
+                    // if ($user->getCity() == '' || preg_match("/[0-9]/", $user->getCity())) {
+                    //     $_SESSION['errors_update']['city'] = "La ciudad no puede estar vacia o contener numeros";
+                    // }
+
+                    // if ($user->getPhone() == '') {
+                    //     $_SESSION['errors_update']['phone'] = "El telefono no puede estar vacio";
+                    // }
+
+                    // if ($user->getUsername() == '') {
+                    //     $_SESSION['errors_update']['user'] = "El usuario no puede estar vacio";
+                    // }
+
+                    
+
+                    
+                    
+
+
+                    // if (count($_SESSION['errors_update']) <= 0) {
                         
-                    }else{
-                        $_SESSION['update_user'] = "Failed";
-                    }
-                }
+                    // }
+
+
+
+                    $save =  $user->add();
+    
+                        if ($save) {
+                            $_SESSION['register'] = "Complete";
+                            unset($_SESSION['errors_update']);
+                        }else{
+                            unset($_SESSION['register']);
+                        }
+                
 
                 
-            }else{
-                $_SESSION['update_user'] = "Failed";
             }
     
             

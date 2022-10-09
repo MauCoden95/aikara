@@ -17,11 +17,11 @@
 <body>
     <header id="header">
         <div class="center">
-            <a href="Index.php"><img src="<?= base_url ?>/Assets/Img/Logo.png" alt="Logo"></a>
+            <a href="<?= base_url ?>/Comida/index"><img src="<?= base_url ?>/Assets/Img/Logo.png" alt="Logo"></a>
 
             <nav id="navbar">
                 <ul>
-                    <li><a href="<?= base_url ?>/Comida/Index">Inicio</a></li>
+                    <li><a href="<?= base_url ?>/Comida/index">Inicio</a></li>
                     <li><a href="<?= base_url ?>/Pagina/about">Sobre Nosotros</a></li>
                     <li><a href="<?= base_url ?>/Comida/menu">Menu</a></li>
                     <li><a href="">Ordenes</a></li>
@@ -59,6 +59,8 @@
 
 
                 <?php endif; ?>
+
+                
             </form>
         </div>
        
