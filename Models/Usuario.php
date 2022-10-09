@@ -131,17 +131,16 @@
         }
 
         public function update(){
-            $result = false;
+                $result = false;
 
-            $password_crypt = password_hash($this->getPassword(), PASSWORD_BCRYPT, ['cost' => 4]);
-            $sql = "UPDATE users SET username = '{$this->getUsername()}', name = '{$this->getName()}', dni = {$this->getDni()}, address = '{$this->getAddress()}', city = '{$this->getCity()}', phone = {$this->getPhone()}, password = '{$this->getPassword()}' WHERE id = {$this->getId()}";
+                $password_crypt = password_hash($this->getPassword(), PASSWORD_BCRYPT, ['cost' => 4]);
+                $sql = "UPDATE users SET username = '{$this->getUsername()}', name = '{$this->getName()}', dni = {$this->getDni()}, address = '{$this->getAddress()}', city = '{$this->getCity()}', phone = {$this->getPhone()}, password = '{$this->getPassword()}' WHERE id = {$this->getId()}";
 
-            $query = $this->db->query($sql);
-            if ($query) {
-                $result = true;
-            }
-
-
+                $query = $this->db->query($sql);
+                if ($query) {
+                    $result = true;
+                }
+                
             return $result;
 
         }
@@ -156,6 +155,8 @@
             if ($delete) {
                 $result = true;
             }
+
+            
 
             return $result;
         }

@@ -392,7 +392,7 @@ html{
 
 #banner > div h2{
     color: #fff;
-    font-size: 7rem;
+    font-size: 10rem;
 }
 
 
@@ -525,6 +525,42 @@ html{
     font-size: 1.4rem;
     text-align: center;
 }
+
+
+
+/*MENU*/
+#foods{
+    width: 100%;
+    min-height: 55rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+.food-card{
+    width: 25rem;
+    height: 30rem;
+    border-radius: 1rem;
+    border: .1rem solid #000;
+    margin: 2rem;
+}
+
+.food-card img{
+    width: 100%;
+    height: 60%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.food-card h2{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
 
 
 

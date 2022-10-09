@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="<?= base_url ?>/Comida/Index">Inicio</a></li>
                     <li><a href="<?= base_url ?>/Pagina/about">Sobre Nosotros</a></li>
-                    <li><a href="">Menu</a></li>
+                    <li><a href="<?= base_url ?>/Comida/menu">Menu</a></li>
                     <li><a href="">Ordenes</a></li>
                     <li><a href="<?= base_url ?>/Pagina/contact">Contacto</a></li>
                 </ul>
@@ -53,6 +53,7 @@
                     <a href="#">Recuperar contraseña</a>
                 <?php else: ?>
                     <a href="#">Mis Pedidos</a>
+                    <a href="http://localhost/Aikara/Usuario/update">Dejar reseña</a>
                     <a href="http://localhost/Aikara/Usuario/update">Configuracion</a>
                     <a href="http://localhost/Aikara/Usuario/logout">Cerrar Sesion</a>                   
 

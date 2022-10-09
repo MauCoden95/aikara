@@ -26,6 +26,8 @@
                 $user->setPhone($phone);
                 $user->setPassword($password);
 
+                
+
                 $save =  $user->add();
 
                 if ($save) {
@@ -73,6 +75,8 @@
         }
 
         public function settings(){
+            
+
             if (isset($_POST)) {
                 $id = $_POST['id'];
                 $username = $_POST['username'];
@@ -110,11 +114,16 @@
             }else{
                 $_SESSION['update_user'] = "Failed";
             }
-
+    
+            
+            
 
             header('Location: http://localhost/Aikara/Usuario/update');
         }
 
+
+
+        
         public function delete(){
             if ($_POST) {
                 $password1 = $_POST['password1'];
