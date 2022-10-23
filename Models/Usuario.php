@@ -48,7 +48,7 @@
         }
 
         public function getPassword() {
-            return password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
+            return $this->password;
         }
 
 
@@ -102,28 +102,27 @@
 
         
 
-        public function login(){
+        public function login($username,$password){
             $result = false;
-            $username = $this->username;
-            $password = $this->password;
-
+            
 
             //Comprobar si existe el usuario
             $sql = "SELECT * FROM users WHERE username = '$username'";
             $login = $this->db->query($sql);
 
-           
+            
 
-            if (isset($login) && $login->num_rows == 1) {
-                $user = $login->fetch_object();
-                
+            if ($login && $login->num_rows == 1) {
+                $usuario = $login->fetch_object();
 
-                //Verificar la constraseña
-                $verify = password_verify($password,$user->password);
                
+                
+                $verify = password_verify($password, $usuario->password);
+
                 if ($verify) {
-                    $result = $user;                    
-                }              
+                    $result = $usuario;
+                }
+                      
 
 
             }
@@ -131,12 +130,19 @@
 
         }
 
+
+
+        
+
         public function update(){
                 $result = false;
 
                 $sql = "UPDATE users SET username = '{$this->getUsername()}', name = '{$this->getName()}', dni = {$this->getDni()}, address = '{$this->getAddress()}', city = '{$this->getCity()}', phone = {$this->getPhone()}, password = '{$this->getPassword()}' WHERE id = {$this->getId()}";
 
                 $query = $this->db->query($sql);
+
+               
+
                 if ($query) {
                     $result = true;
                 }

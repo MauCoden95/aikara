@@ -11,7 +11,7 @@
                 </ul>
             </div>
 
-        <?php else: ?>
+        <?php elseif(isset($_SESSION['register'])): ?>
             <div class="success">
                 <p>El nuevo usuario se registró con exito!!!</p>
             </div>

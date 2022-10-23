@@ -7,6 +7,10 @@
         public function contact(){
             require_once 'Views/Layout/Contact.php';
         }
+
+        public function review(){
+            require_once 'Views/Layout/Review.php';
+        }
     }
 
 

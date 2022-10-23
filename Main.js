@@ -67,3 +67,20 @@ videoBtn.forEach(btn => {
     });
 });
 
+
+
+
+
+
+/*REVIEWS*/
+const inputRange = document.querySelector('.range');
+const textRange = document.querySelector('.range-value');
+
+
+
+inputRange.addEventListener('change', () => {
+    textRange.innerHTML = inputRange.value;
+})
+
+
+

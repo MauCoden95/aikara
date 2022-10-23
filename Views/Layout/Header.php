@@ -11,7 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url ?>Assets/Css/Styles.css">
     <link rel="shortcut icon" href="<?= base_url ?>/Assets/Img/Logo.png" type="image/x-icon">
+
+    <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/7483adbd94.js" crossorigin="anonymous"></script>
+
+    
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
     <title>Aikara :: Cocina Japonesa</title>
 </head>
 <body>
@@ -53,7 +61,7 @@
                     <a href="#">Recuperar contraseña</a>
                 <?php else: ?>
                     <a href="#">Mis Pedidos</a>
-                    <a href="http://localhost/Aikara/Usuario/update">Dejar reseña</a>
+                    <a href="http://localhost/Aikara/Pagina/Review">Dejar reseña</a>
                     <a href="http://localhost/Aikara/Usuario/update">Configuracion</a>
                     <a href="http://localhost/Aikara/Usuario/logout">Cerrar Sesion</a>                   
 

@@ -76,14 +76,18 @@
             header('Location: http://localhost/Aikara/Usuario/registro');
         }
 
-        public function login(){
-            if($_POST){
+       public function login(){
+
+
+            if(isset($_POST)){
                 //Identificar al usuario
                 //Consulta a la bbdd 
                 $user = new Usuario();
                 $user->setUsername($_POST['user']);
                 $user->setPassword($_POST['password']);
-                $identity = $user->login();
+                $identity = $user->login($_POST['user'],$_POST['password']);
+
+                
 
                 
 
@@ -135,31 +139,36 @@
                     $user->setPassword($password);
 
 
-                    // $_SESSION['errors_update'] = array();
+                    $_SESSION['errors_update'] = array();
 
-                    // if ($user->getName() == '' || preg_match("/[0-9]/", $user->getName())) {
-                    //     $_SESSION['errors_update']['name'] = "El nombre no puede estar vacio o contener numeros";
-                    // }
+                    if ($user->getName() == '' || preg_match("/[0-9]/", $user->getName())) {
+                        $_SESSION['errors_update']['name'] = "El nombre no puede estar vacio o contener numeros";
+                    }
                 
-                    // if ($user->getDni() == '') {
-                    //     $_SESSION['errors_update']['dni'] = "El dni no puede estar vacio";
-                    // }
+                    if ($user->getDni() == '') {
+                        $_SESSION['errors_update']['dni'] = "El dni no puede estar vacio";
+                    }
 
-                    // if ($user->getAddress() == '') {
-                    //     $_SESSION['errors_update']['address'] = "La direccion no puede estar vacia";
-                    // }
+                    if ($user->getAddress() == '') {
+                        $_SESSION['errors_update']['address'] = "La direccion no puede estar vacia";
+                    }
 
-                    // if ($user->getCity() == '' || preg_match("/[0-9]/", $user->getCity())) {
-                    //     $_SESSION['errors_update']['city'] = "La ciudad no puede estar vacia o contener numeros";
-                    // }
+                    if ($user->getCity() == '' || preg_match("/[0-9]/", $user->getCity())) {
+                        $_SESSION['errors_update']['city'] = "La ciudad no puede estar vacia o contener numeros";
+                    }
 
-                    // if ($user->getPhone() == '') {
-                    //     $_SESSION['errors_update']['phone'] = "El telefono no puede estar vacio";
-                    // }
+                    if ($user->getPhone() == '') {
+                        $_SESSION['errors_update']['phone'] = "El telefono no puede estar vacio";
+                    }
 
-                    // if ($user->getUsername() == '') {
-                    //     $_SESSION['errors_update']['user'] = "El usuario no puede estar vacio";
-                    // }
+                    if ($user->getUsername() == '') {
+                        $_SESSION['errors_update']['user'] = "El usuario no puede estar vacio";
+                    }
+
+                    if ($user->getPassword() == '' || strlen($user->getPassword()) <= 7) {
+                        $_SESSION['errors']['password'] = "La contraseña no puede estar vacia o tener menos de 8 caracteres";
+                    }
+
 
                     
 
@@ -167,20 +176,18 @@
                     
 
 
-                    // if (count($_SESSION['errors_update']) <= 0) {
-                        
-                    // }
-
-
-
-                    $save =  $user->add();
+                    if (count($_SESSION['errors_update']) <= 0) {
+                        $save =  $user->update();
     
                         if ($save) {
-                            $_SESSION['register'] = "Complete";
+                            $_SESSION['settings'] = "Complete";
                             unset($_SESSION['errors_update']);
-                        }else{
-                            unset($_SESSION['register']);
                         }
+                    }
+
+
+
+                   
                 
 
                 

@@ -2,17 +2,17 @@
     <h1>Actualizar mis datos</h1>
     <form action="<?= base_url ?>/Usuario/settings" method="post">
         <?php if(isset($_SESSION['errors_update'])) : ?>
-            <!-- <div class="error">
+            <div class="error">
                 <ul>
-                    <?php foreach($_SESSION['errors_update'] as $error_update) :  ?>
-                        <li><?= $error_update; ?></li>
+                    <?php foreach($_SESSION['errors_update'] as $error) :  ?>
+                        <li><?= $error; ?></li>
                     <?php endforeach; ?>
                 </ul>
-            </div> -->
+            </div>
 
-            <?php print_r(count($_SESSION['errors_update'])); ?>
+            
 
-        <?php elseif(isset($_SESSION['register'])): ?>
+        <?php elseif(isset($_SESSION['settings'])): ?>
             <div class="success">
                 <p>Tus datos se actualizaron con exito!!!</p>
             </div>
@@ -30,15 +30,7 @@
         <input type="submit" value="Actualizar">
 
 
-        <!-- <input class="input-hidden" type="text" name="id" value="" autocomplete="off">
-        <input type="text" name="name" value="" autocomplete="off">
-        <input type="number" name="dni" value="" autocomplete="off">
-        <input type="text" name="address" value="" autocomplete="off">
-        <input type="text" name="city" value="" autocomplete="off">
-        <input type="number" name="phone" value="" autocomplete="off">
-        <input type="text" name="username" value="" autocomplete="off">
-        <input type="password" name="password" placeholder="Contraseña" autocomplete="off">
-        <input type="submit" value="Actualizar"> -->
+        
     </form>
 
 

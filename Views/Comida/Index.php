@@ -3,7 +3,7 @@
     <div class="slider-home">
         <h1>Aikara</h1>
         <p>Gastronomia japonesa de primer nivel</p>
-        <a href="#">Ver más</a>
+        <a href="http://localhost/Aikara/Pagina/about">Ver más</a>
     </div>
 
     <div class="controls">
