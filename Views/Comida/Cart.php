@@ -4,8 +4,8 @@
     <?php if(isset($_SESSION['identity'])) : ?>
 
         <?php if(isset($_SESSION['cart'])) : ?>
-        <div class="container-fluid">
-            <div class="row ">
+        <div class="container-fluid mt-5">
+            <div class="row d-flex justify-content-evenly">
                 <div class="col-6 d-flex flex-column p-3 align-items-center">
                     <table class="table w-100 mb-5 text-center">
                         <thead>
@@ -28,6 +28,26 @@
                     </table>
 
                     <a href="http://localhost/Aikara/Comida/clearCart">Limpiar carrito</a>
+                </div>
+
+                <div class="col-4 d-flex flex-column align-items-center bg-light">
+                   <h2>Resumen</h2>
+                   <h4 class="mt-3">Total: 10000$</h4>
+                   <h2>Método de pago</h2>
+                   <div class="form-check mt-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Efectivo (Se abonará al momento de la entrega)
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Tarjeta de Crédito/Débito
+                        </label>
+                    </div>
+
+                    
                 </div>
             </div>
         </div>

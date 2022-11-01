@@ -32,7 +32,6 @@
                     <li><a href="<?= base_url ?>/Comida/index">Inicio</a></li>
                     <li><a href="<?= base_url ?>/Pagina/about">Sobre Nosotros</a></li>
                     <li><a href="<?= base_url ?>/Comida/menu">Menu</a></li>
-                    <li><a href="">Ordenes</a></li>
                     <li><a href="<?= base_url ?>/Pagina/contact">Contacto</a></li>
                 </ul>
             </nav>
