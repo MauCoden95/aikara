@@ -117,18 +117,22 @@ html{
    color: #fff;
 }
 
-.login{
+.login,
+.cart{
+    display: inline-block;
     font-size: 2rem;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background: var(--color-principal);
+    color: var(--color-secundario);
 }
 
-.login i{
-    margin-left: 1rem;
-}
 
-.login-no-active{
+
+/* .login-no-active{
     color: var(--color-secundario);
     border: .2rem solid var(--color-secundario);
 }
@@ -137,7 +141,7 @@ html{
     color: #fff;
     background: rgb(251, 56, 56);
     border: .2rem solid var(--color-secundario);
-}
+} */
 
 .login-active i{
     background: transparent;
@@ -173,6 +177,11 @@ html{
 .form-login input[type="password"]{
     padding-left: 1rem;
     outline: none;
+}
+
+.form-login p{
+    text-align: center;
+    font-size: 2rem;
 }
 
 .form-login a{
@@ -568,10 +577,11 @@ html{
     border-radius: 1rem 1rem 0 0;
 }
 
-.food-card h2{
-    font-size: 2rem;
-    text-align: center;
-    margin: 2rem 0;
+
+
+.input-quantity{
+    width: 20%;
+    outline: none;
 }
 
 .food-card h3{
@@ -581,16 +591,18 @@ html{
     color: var(--color-secundario);
 }
 
-.food-card h3 a{
+.food-card h3 button{
     background: var(--color-secundario);
     text-decoration: none;
     color: #fff;
     padding: .5rem;
     border-radius: .5rem;
-    margin-left: 2rem;
+    margin: 0 2rem;
+    border: none;
+    transition: all 200ms;
 }
 
-.food-card h3 a:hover{
+.food-card h3 button:hover{
     background: rgb(255, 71, 71);
     text-decoration: none;
     color: #000;
@@ -598,7 +610,20 @@ html{
     border-radius: .5rem;
 }
 
+.input-description{
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 2rem auto;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+}
 
+.input-description:active{
+    border: none;
+    background: transparent;
+}
 
 
 /*REVIEW*/
@@ -633,9 +658,10 @@ html{
 }
 
 input[type=range] {
+    display: block;
     -webkit-appearance: none;
-    margin: 10px 0;
-    width: 100%;
+    margin: 2rem auto;
+    width: 80%;
 }
 
 input[type=range]:focus {
@@ -737,6 +763,12 @@ background: #bf181a;
     font-size: 1.5rem;
 }
 
+.form-div p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
 .form-div textarea{
 display: block;
 width: 80%;
@@ -749,6 +781,7 @@ padding: 1rem;
 
 .form-div input[type='submit']{
     display: block;
+    width: 80%;
     margin: 2rem auto;
     font-size: 2rem;
     padding: 1rem;
@@ -773,6 +806,33 @@ padding: 1rem;
 
 
 
+
+
+
+/*CART*/
+#cart{
+    width: 100%;
+    min-height: 40rem;
+}
+
+#cart h2{
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0;
+}
+
+#cart a{
+    background: #bf181a;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#cart a:hover{
+    background: #ec2b2e;
+}
 
 
 

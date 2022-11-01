@@ -37,12 +37,18 @@
                 </ul>
             </nav>
 
+            <div class="login-cart">
+                <a href="http://localhost/Aikara/Comida/cart">
+                    <?php if(isset($_SESSION['cart'])): ?>
+                        <i class="cart fas fa-shopping-cart">(<?php echo count($_SESSION['cart']); ?>)</i>
+                    <?php else: ?>
+                        <i class="cart fas fa-shopping-cart">(0)</i>
+                    <?php endif; ?>
+                </a>
+                <button class="login login-no-active"><i class="fas fa-user"></i></button>
+            </div>
            
-            <?php if(isset($_SESSION['identity'])) : ?>
-                <button class="user-active login-no-active"><?= $_SESSION['identity']->username; ?></button>
-            <?php else: ?>
-                <button class="login login-no-active">Login<i class="fas fa-user"></i></button>
-            <?php endif; ?>
+           
 
             
             <form action="http://localhost/Aikara/Usuario/login" method="post" class="form-login no-active">
@@ -60,6 +66,8 @@
                     <a href="<?= base_url ?>/Usuario/registro">Registrarse</a>
                     <a href="#">Recuperar contraseña</a>
                 <?php else: ?>
+                    <p><?= $_SESSION['identity']->username; ?></p>
+                    <hr>
                     <a href="#">Mis Pedidos</a>
                     <a href="http://localhost/Aikara/Pagina/Review">Dejar reseña</a>
                     <a href="http://localhost/Aikara/Usuario/update">Configuracion</a>
