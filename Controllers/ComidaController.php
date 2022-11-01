@@ -14,25 +14,32 @@
         }
 
         public function addCart(){
-            if (isset($_SESSION['cart'])) {
-                $my_cart = $_SESSION['cart'];
-        
-                if (isset($_POST['description'])) {
-                    $description = $_POST['description'];
-                    $quantity = $_POST['quantity'];
-                    $num = 0;
-                    $my_cart[] = array('description' => $description, 'quantity' => $quantity);
+            if (isset($_SESSION['identity'])) {
+                if (isset($_SESSION['cart'])) {
+                    $my_cart = $_SESSION['cart'];
+            
+                    if (isset($_POST['description'])) {
+                        $description = $_POST['description'];
+                        $quantity = $_POST['quantity'];
+                        $num = 0;
+                        $my_cart[] = array('description' => $description, 'quantity' => $quantity);
+                    }
+                }else{
+                        $description = $_POST['description'];
+                        $quantity = $_POST['quantity'];
+                        $my_cart[] = array('description' => $description, 'quantity' => $quantity);
                 }
+            
+                $_SESSION['cart'] = $my_cart;
+    
+                header('Location: http://localhost/Aikara/Comida/menu');
+    
             }else{
-                    $description = $_POST['description'];
-                    $quantity = $_POST['quantity'];
-                    $my_cart[] = array('description' => $description, 'quantity' => $quantity);
+                header('Location: http://localhost/Aikara/Comida/Cart');
             }
-        
-            $_SESSION['cart'] = $my_cart;
 
-            header('Location: http://localhost/Aikara/Comida/menu');
-        
+
+                   
            
         }
 

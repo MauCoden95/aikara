@@ -20,7 +20,11 @@ html{
     font-size: 62.5%;
 }
 
-
+.message{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10rem;
+}
 
 .active{
     display: block;
@@ -171,6 +175,7 @@ html{
     width: 90%;
     margin: 1rem auto;
     padding: 1rem;
+    font-size: 1.5rem;
 }
 
 .form-login input[type="text"],
