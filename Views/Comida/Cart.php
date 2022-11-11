@@ -33,7 +33,7 @@
                                 <?="<h4>" . $key['quantity'] . "</h4>" ?>
                             </td>
                             <td>
-                                <?="<h4>" . $key['subtotal'] . "</h4>" ?>
+                                <?="<h4>" . $key['subtotal'] . " $</h4>" ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -53,7 +53,7 @@
                 $sum += $cart['subtotal'];
                         ?>
                 <?php endforeach; ?>
-                <h3 class="mt-3">Total: <?= $sum; ?>$</h3>
+                <h3 class="mt-3">Total: <?= $sum; ?> $</h3>
                 <h2>Método de pago</h2>
                 <div class="form-check mt-3">
                     <input class="form-check-input fs-4" type="radio" name="flexRadioDefault" id="card_radio" checked>
@@ -65,11 +65,12 @@
                 <div class="form-check">
                     <input class="form-check-input fs-4" type="radio" name="flexRadioDefault" id="cash_radio">
                     <label class="form-check-label fs-4" for="cash_radio">
-                        Efectivo (Se abonará al momento de la entrega)
+                        Efectivo 
                     </label>
                 </div>
 
                 <form class="container-fluid mt-4 pt-5" id="cash_pay">
+                    <h3>Se abonará al momento de la entrega</h3>
                     <a href="" class="btn btn-danger p-2 fs-3">Confirmar compra</a>
                 </form>
 
@@ -96,7 +97,7 @@
 
                     <div class="container-fluid mb-3">
                         Vencimiento de la tarjeta
-                        <input class="input-cc" type="text">
+                        <input class="input-cc" type="date">
                     </div>
 
                     <a href="" class="btn btn-danger p-3 fs-3" id="btn-confirm-buy">Confirmar compra</a>
