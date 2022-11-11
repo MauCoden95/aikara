@@ -19,6 +19,8 @@ if (btnLogin) {
             btnLogin.classList.remove('login-active');
             btnLogin.classList.add('login-no-active');
         }
+
+        
     });
 }
 
@@ -76,11 +78,44 @@ videoBtn.forEach(btn => {
 const inputRange = document.querySelector('.range');
 const textRange = document.querySelector('.range-value');
 
+if (inputRange) {
+    inputRange.addEventListener('change', () => {
+        textRange.innerHTML = inputRange.value;
+    })    
+}
 
 
-inputRange.addEventListener('change', () => {
-    textRange.innerHTML = inputRange.value;
-})
 
 
 
+
+
+// var swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 3,
+//     spaceBetween: 30,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
+
+
+
+/*CART*/
+const checkCash = document.getElementById('cash_radio');
+const checkCard = document.getElementById('card_radio');
+const cashPay = document.querySelector('#cash_pay');
+const cardPay = document.querySelector('#card_pay');
+
+
+if (checkCash.checked) {
+    console.log('cash');
+    cashPay.style.display = 'block';
+    cardPay.style.display = 'none';
+}
+
+if (checkCard.checked) {
+    console.log('card');
+    cardPay.style.display = 'block';
+    cashPay.style.display = 'none';
+}

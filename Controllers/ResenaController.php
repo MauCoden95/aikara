@@ -44,6 +44,11 @@
         }
 
 
+        // public function list(){
+        //     $resena = new Resena();
+
+        //     require_once('http://localhost/Aikara/Index.php');
+        // }
 
 
     }

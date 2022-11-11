@@ -76,16 +76,9 @@
         }
 
         public function list(){
-            $result = false;
-            $sql = "SELECT * FROM reviews";
+            $reviews = $this->db->query("SELECT * FROM reviews");
 
-            $query = $this->db->query($sql);
-
-            if ($query) {
-                $result = true;
-            }
-
-            return $result;
+            return $reviews;
         }
 
         

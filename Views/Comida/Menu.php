@@ -11,7 +11,7 @@
             <img src="<?= base_url ?>/Assets/Img/Comidas/<?= $foo->image ?>" alt="comida">
             <form action="http://localhost/Aikara/Comida/addCart" method="post">
                 <input class="input-description" type="text" name="description" value="<?= $foo->description ?>" readonly>
-                <h3><?= $foo->price ?> $ <button type="submit" href="#"><i class="fas fa-shopping-cart"></i></button> <input class="input-quantity" type="number" name="quantity" min="1" value="1"></h3>
+                <h3><input class="input-price" type="text" name="price" value="<?= $foo->price ?>" readonly>$  <button type="submit" href="#"><i class="fas fa-shopping-cart"></i></button> <input class="input-quantity" type="number" name="quantity" min="1" value="1"></h3>
                 
             </form>
         </div>
