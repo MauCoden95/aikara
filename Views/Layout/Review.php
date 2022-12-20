@@ -11,7 +11,7 @@
                     Hubo un error al guardar la reseña
                 </div>
             <?php endif; ?>
-            <h3><span class="range-value">1</span>  Estrellas</h3>
+            <h3><span class="range-value"><i class="fas fa-star"></i></span></h3>
             <p>-Solo se permite una reseña por usuario-</p>
             <input class="range" type="range" min="1" max="5" name="stars">
             <textarea name="review"></textarea>

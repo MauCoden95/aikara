@@ -34,10 +34,85 @@
     </section>
 
 
-    <section id="review-slider">
+    <section id="testimony">
         <h2>Reseñas de clientes</h2>
         
+        <div class="slider-container active" data-aos="zoom-out">
+        
+        <div class="slide">
+          <i class="fas fa-quote-right icon"></i>
+          <div class="item">
+            <img src="IMG/PERSONAS/Person1.jpg" alt="">
+            <div class="item-info">
+              <h3>Lorena</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum pariatur ullam, autem numquam repellat non atque. Cum, porro dicta doloribus rem animi quae qui, odit sunt molestias perferendis aut.</p>
+          
+          
+        </div>
 
+
+        
+      </div>
+
+
+      <div class="slider-container">
+        <div class="slide">
+          <i class="fas fa-quote-right icon"></i>
+          <div class="item">
+            <img src="IMG/PERSONAS/Person2.jpg" alt="">
+            <div class="item-info">
+              <h3>Fernando</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum pariatur ullam, autem numquam repellat non atque. Cum, porro dicta doloribus rem animi quae qui, odit sunt molestias perferendis aut.</p>
+        </div>
+      </div>
+
+
+      <div class="slider-container">
+        <div class="slide">
+          <i class="fas fa-quote-right icon"></i>
+          <div class="item">
+            <img src="IMG/PERSONAS/Person3.jpg" alt="">
+            <div class="item-info">
+              <h3>Martina</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum pariatur ullam, autem numquam repellat non atque. Cum, porro dicta doloribus rem animi quae qui, odit sunt molestias perferendis aut.</p>
+        </div>
+      </div>
+
+
+
+
+
+
+   
+      <div id="prev" class="fas fa-chevron-left"></div>
+      <div id="next" class="fas fa-chevron-right"></div>
       
     </section>
 

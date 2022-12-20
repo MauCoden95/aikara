@@ -97,7 +97,7 @@
 
                     <div class="container-fluid mb-3">
                         Vencimiento de la tarjeta
-                        <input class="input-cc" type="date">
+                        <input class="input-cc-month" type="month">
                     </div>
 
                     <a href="" class="btn btn-danger p-3 fs-3" id="btn-confirm-buy">Confirmar compra</a>

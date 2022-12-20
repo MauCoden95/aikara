@@ -80,7 +80,18 @@ const textRange = document.querySelector('.range-value');
 
 if (inputRange) {
     inputRange.addEventListener('change', () => {
-        textRange.innerHTML = inputRange.value;
+        if (inputRange.value == 1) {
+            textRange.innerHTML = '<i class="fas fa-star"></i>';     
+        }else if (inputRange.value == 2) {
+            textRange.innerHTML = '<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>';     
+        }else if (inputRange.value == 3) {
+            textRange.innerHTML = '<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>';     
+        }else if (inputRange.value == 4) {
+            textRange.innerHTML = '<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>';     
+        }else{
+            textRange.innerHTML = '<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>'+'<i class="fas fa-star"></i>';     
+        }
+       
     })    
 }
 
@@ -90,14 +101,36 @@ if (inputRange) {
 
 
 
-// var swiper = new Swiper(".mySwiper", {
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//   });
+/*SLIDES TESTIMONY*/
+let slides = document.querySelectorAll('.slider-container');
+let nextBtn = document.querySelector('#next');
+let prevBtn = document.querySelector('#prev');
+let index = 0;
+
+
+nextBtn.addEventListener('click', () => {
+    next();
+});
+
+prevBtn.addEventListener('click', () => {
+    prev();
+})
+
+function next() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+function prev() {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
+
+
+
 
 
 

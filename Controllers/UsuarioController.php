@@ -211,6 +211,10 @@
                 if ($password1 == $password2) {
 
                     $user = new Usuario();
+                    $user->setId($_SESSION['identity']->id);
+
+                    var_dump($user);
+                    die();
                     $verify = password_verify($password1, $user->getPassword());
 
                     if ($verify) {
@@ -229,6 +233,8 @@
                     $_SESSION['delete_user_error'] = "Error, las contraseñas no coinciden";
                 }
             }
+
+            header('Location: http://localhost/Aikara/Comida/Index');
         }
     }
 
