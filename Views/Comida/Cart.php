@@ -54,14 +54,7 @@
                         ?>
                 <?php endforeach; ?>
                 <h3 class="mt-3">Total: <?= $sum; ?> $</h3>
-                <h2>Método de pago</h2>
-                <div class="form-check mt-3">
-                    <input class="form-check-input fs-4" type="radio" name="flexRadioDefault" id="card_radio" checked>
-                    <label class="form-check-label fs-4" for="card_radio">
-                        Tarjeta de Crédito/Débito
-                    </label>
-                </div>
-
+                <h2 class="mt-5 mb-3">Método de pago</h2>
                 <div class="form-check">
                     <input class="form-check-input fs-4" type="radio" name="flexRadioDefault" id="cash_radio">
                     <label class="form-check-label fs-4" for="cash_radio">
@@ -69,12 +62,19 @@
                     </label>
                 </div>
 
-                <form class="container-fluid mt-4 pt-5" id="cash_pay">
+                <form class="container-fluid mt-2" id="cash_pay">
                     <h3>Se abonará al momento de la entrega</h3>
-                    <a href="" class="btn btn-danger p-2 fs-3">Confirmar compra</a>
                 </form>
 
-                <form class="mt-4 pt-5" id="card_pay">
+
+                <div class="form-check mt-3">
+                    <input class="form-check-input fs-4" type="radio" name="flexRadioDefault" id="card_radio">
+                    <label class="form-check-label fs-4" for="card_radio">
+                        Tarjeta de Crédito/Débito
+                    </label>
+                </div>
+
+                <form class="mt-4" id="card_pay">
                     <div class="container-fluid mb-3">
                         <i class="fab fa-cc-visa fs-1"></i>
                         <i class="fab fa-cc-mastercard fs-1"></i>

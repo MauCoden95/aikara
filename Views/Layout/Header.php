@@ -74,7 +74,6 @@ require_once 'Config/Parameters.php';
                 <input type="password" name="password" placeholder="Contraseña">
                 <input type="submit" value="Ingresar">
                 <a href="<?= base_url ?>/Usuario/registro">Registrarse</a>
-                <a href="#">Recuperar contraseña</a>
                 <?php else: ?>
                 <p>
                     <?= $_SESSION['identity']->username; ?>

@@ -202,40 +202,7 @@
 
 
         
-        public function delete(){
-            if ($_POST) {
-                $password1 = $_POST['password1'];
-                $password2 = $_POST['password2'];
-
-                
-                if ($password1 == $password2) {
-
-                    $user = new Usuario();
-                    $user->setId($_SESSION['identity']->id);
-
-                    var_dump($user);
-                    die();
-                    $verify = password_verify($password1, $user->getPassword());
-
-                    if ($verify) {
-                        $delete = $user->delete();
-
-                        if ($delete) {
-                            header('Location: http://localhost/Aikara/Comida/index');
-                        }else{
-                            header('Location: http://localhost/Aikara/Usuario/update');
-                            $_SESSION['delete_user_error'] = "Hubo un error al eliminar tu cuenta";
-                        }
-                    }else{
-                        $_SESSION['delete_user_error'] = "Error, campos vacíos o contraseña inexistente";
-                    }
-                }else{
-                    $_SESSION['delete_user_error'] = "Error, las contraseñas no coinciden";
-                }
-            }
-
-            header('Location: http://localhost/Aikara/Comida/Index');
-        }
+      
     }
 
 

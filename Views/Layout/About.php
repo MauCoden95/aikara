@@ -39,17 +39,17 @@
     <h4>¿Porqué elegirnos?</h4>
     <div class="about-info">
         <div class="about-info__item">
-            <h3 class="fas fa-motorcycle"></h3>
+            <img src="../../Assets/Img/Delivery.png">
             <p>Envíos rápidos</p>
         </div>
 
         <div class="about-info__item">
-            <h3 class="fas fa-utensils"></h3>
+            <img src="../../Assets/Img/Restaurant.png">
             <p>Excelente calidad</p>
         </div>
 
         <div class="about-info__item">
-            <h3 class="fas fa-paste"></h3>
+            <img src="../../Assets/Img/Order.png">
             <p>Orden online</p>
         </div>
     </div>

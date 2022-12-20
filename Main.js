@@ -135,20 +135,20 @@ function prev() {
 
 
 /*CART*/
-const checkCash = document.getElementById('cash_radio');
-const checkCard = document.getElementById('card_radio');
-const cashPay = document.querySelector('#cash_pay');
-const cardPay = document.querySelector('#card_pay');
+// const checkCash = document.getElementById('cash_radio');
+// const checkCard = document.getElementById('card_radio');
+// const cashPay = document.querySelector('#cash_pay');
+// const cardPay = document.querySelector('#card_pay');
 
 
-if (checkCash.checked) {
-    console.log('cash');
-    cashPay.style.display = 'block';
-    cardPay.style.display = 'none';
-}
+// if (checkCash.checked) {
+//     console.log('cash');
+//     cashPay.style.display = 'block';
+//     cardPay.style.display = 'none';
+// }
 
-if (checkCard.checked) {
-    console.log('card');
-    cardPay.style.display = 'block';
-    cashPay.style.display = 'none';
-}
+// if (checkCard.checked) {
+//     console.log('card');
+//     cardPay.style.display = 'block';
+//     cashPay.style.display = 'none';
+// }

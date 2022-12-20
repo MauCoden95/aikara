@@ -152,20 +152,7 @@
         }
 
 
-        public function delete(){
-            $result = false;
-
-            $sql = "DELETE FROM users WHERE id = {$this->getId()}";
-            $delete = $this->db->query($sql);
-
-            if ($delete) {
-                $result = true;
-            }
-
-            
-
-            return $result;
-        }
+        
     }
 
 

@@ -469,6 +469,12 @@ html{
     border: .1rem solid #000;
 }
 
+.about-info__item img{
+    width: 10rem;
+    display: block;
+    margin: 2rem auto;
+}
+
 .about-info__item h3{
     display: block;
     font-size: 7rem;
@@ -787,13 +793,14 @@ background: #bf181a;
 }
 
 .form-div textarea{
-display: block;
-width: 80%;
-height: 20rem;
-margin: 2rem auto;
-border: .1rem solid #000;
-outline: none;
-padding: 1rem;
+    display: block;
+    width: 80%;
+    height: 20rem;
+    margin: 2rem auto;
+    border: .1rem solid #000;
+    outline: none;
+    padding: 1rem;
+    font-size: 2rem;
 }
 
 .form-div input[type='submit']{
@@ -986,11 +993,10 @@ padding: 1rem;
     font-size: 3rem;
 }
 
-#cash_pay,
+/* #cash_pay,
 #card_pay{
-    display: none;
     border-top: .1rem solid #000;
-}
+} */
 
 
 
@@ -1005,6 +1011,15 @@ padding: 1rem;
 #btn-confirm-buy{
     margin-top: 2rem;
 }
+
+.form-check{
+    width: 100%;
+    padding: 1rem;
+    border-top: .1rem solid #000;
+}
+
+
+
 
 
 /*Reviews*/

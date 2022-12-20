@@ -63,10 +63,9 @@
             $result = false;
             $sql = "INSERT INTO reviews VALUES(NULL,$id_user,{$this->getStars()},'{$this->getReview()}');";
 
-            $save = $this->db->query($sql);
+            $save = $this->db->query($sql);          
 
            
-
             if ($save) {
                 $result = true;
             }
@@ -76,6 +75,7 @@
         }
 
         public function list(){
+            //$reviews = $this->db->query("SELECT *, u.name FROM users u, reviews WHERE u.id = u.user_id");
             $reviews = $this->db->query("SELECT * FROM reviews");
 
             return $reviews;

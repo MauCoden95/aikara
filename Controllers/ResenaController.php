@@ -27,9 +27,8 @@
                 $save_review = $review->add($usuario_id);
 
 
-                $error = mysqli_error($save_review);
-                var_dump($error);
-
+                //$error = mysqli_error($save_review);
+               
                 if ($save_review) {
                     $_SESSION['review'] = "Complete";
                 }else{
@@ -45,9 +44,10 @@
 
 
         public function list(){
-            $resena = new Resena();
+            $review = new Resena();
+            $testimonies = $review->list();
 
-            require_once('http://localhost/Aikara/Index.php');
+            require_once 'Views/Reviews/Reviews.php';
         }
 
 
